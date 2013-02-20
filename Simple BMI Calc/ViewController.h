@@ -10,4 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property IBOutlet UILabel* heightLabel;
+@property IBOutlet UILabel* weightLabel;
+@property IBOutlet UISwitch* unitSwitch;
+
+-(IBAction)unitSwitch:(UISwitch*)sender;
+
 @end

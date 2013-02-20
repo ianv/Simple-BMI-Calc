@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -23,7 +23,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SM6-do-7tP"/>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SM6-do-7tP">
+                                <connections>
+                                    <action selector="unitSwitch:" destination="2" eventType="valueChanged" id="NJj-4h-T0s"/>
+                                </connections>
+                            </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2O-Dm-oZv">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Calculate!">
@@ -36,7 +40,8 @@
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gS5-2Z-Bpt">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="340" id="3Qx-8b-0bY"/>
+                                    <constraint firstAttribute="width" constant="253" id="Tqu-78-K8c"/>
+                                    <constraint firstAttribute="height" constant="380" id="dqN-AY-znw"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Height:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7i-ZY-ArL">
@@ -60,48 +65,57 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="in." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxB-q1-8sz">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="lbs." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q3K-Fx-GLO">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="G2O-Dm-oZv" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="1TW-nn-Fe6"/>
-                            <constraint firstItem="4fi-Fj-t0b" firstAttribute="trailing" secondItem="yey-d1-f1Y" secondAttribute="trailing" type="default" id="2Te-d1-238"/>
+                            <constraint firstItem="nKR-lf-ke0" firstAttribute="top" secondItem="SM6-do-7tP" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1WC-uK-Rbr"/>
                             <constraint firstItem="7tB-XC-p3k" firstAttribute="top" secondItem="v7i-ZY-ArL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="2w2-nr-GmU"/>
                             <constraint firstItem="v7i-ZY-ArL" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4DE-Ba-k0Y"/>
-                            <constraint firstItem="G2O-Dm-oZv" firstAttribute="centerY" secondItem="SM6-do-7tP" secondAttribute="centerY" type="default" id="5xX-R9-XgV"/>
                             <constraint firstItem="v7i-ZY-ArL" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="6fd-Jf-TWy"/>
+                            <constraint firstItem="G2O-Dm-oZv" firstAttribute="top" secondItem="gS5-2Z-Bpt" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="80u-Nf-GwR"/>
+                            <constraint firstItem="G2O-Dm-oZv" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="ASK-zM-Nxm"/>
                             <constraint firstItem="7tB-XC-p3k" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="B6f-K1-vz8"/>
-                            <constraint firstAttribute="trailing" secondItem="gS5-2Z-Bpt" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="CIV-W7-v90"/>
-                            <constraint firstItem="SM6-do-7tP" firstAttribute="leading" secondItem="G2O-Dm-oZv" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="EAt-0R-bRd"/>
+                            <constraint firstItem="4fi-Fj-t0b" firstAttribute="bottom" secondItem="q3K-Fx-GLO" secondAttribute="bottom" type="default" id="HHf-Mg-KSq"/>
                             <constraint firstItem="G2O-Dm-oZv" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="KJw-IT-cGs"/>
                             <constraint firstItem="7tB-XC-p3k" firstAttribute="baseline" secondItem="4fi-Fj-t0b" secondAttribute="baseline" type="default" id="LD7-Lh-4HN"/>
-                            <constraint firstItem="gS5-2Z-Bpt" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="STx-si-ups"/>
-                            <constraint firstItem="4fi-Fj-t0b" firstAttribute="bottom" secondItem="7tB-XC-p3k" secondAttribute="bottom" type="default" id="XOg-oF-NpO"/>
+                            <constraint firstItem="4fi-Fj-t0b" firstAttribute="top" secondItem="yey-d1-f1Y" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="P0H-y8-s7I"/>
+                            <constraint firstItem="gS5-2Z-Bpt" firstAttribute="centerX" secondItem="G2O-Dm-oZv" secondAttribute="centerX" type="default" id="QVI-8E-zZs"/>
+                            <constraint firstItem="nKR-lf-ke0" firstAttribute="top" secondItem="4fi-Fj-t0b" secondAttribute="top" type="default" id="Qif-Ni-XF2"/>
+                            <constraint firstItem="7tB-XC-p3k" firstAttribute="baseline" secondItem="q3K-Fx-GLO" secondAttribute="baseline" type="default" id="Tv6-dv-k28"/>
+                            <constraint firstItem="nKR-lf-ke0" firstAttribute="trailing" secondItem="SM6-do-7tP" secondAttribute="trailing" type="default" id="Ui8-g3-KsC"/>
                             <constraint firstItem="yey-d1-f1Y" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Yfr-xt-1ck"/>
-                            <constraint firstAttribute="trailing" secondItem="nKR-lf-ke0" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="d40-zp-4xS"/>
-                            <constraint firstAttribute="trailing" secondItem="SM6-do-7tP" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="eCw-et-Poc"/>
-                            <constraint firstAttribute="bottom" secondItem="nKR-lf-ke0" secondAttribute="bottom" constant="5" id="evv-W2-n6G"/>
+                            <constraint firstItem="q3K-Fx-GLO" firstAttribute="leading" secondItem="fxB-q1-8sz" secondAttribute="leading" type="default" id="bio-Ut-m1T"/>
+                            <constraint firstItem="fxB-q1-8sz" firstAttribute="baseline" secondItem="v7i-ZY-ArL" secondAttribute="baseline" type="default" id="eu9-be-BMb"/>
+                            <constraint firstItem="q3K-Fx-GLO" firstAttribute="leading" secondItem="4fi-Fj-t0b" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="exU-Bm-Qj3"/>
                             <constraint firstItem="4fi-Fj-t0b" firstAttribute="leading" secondItem="yey-d1-f1Y" secondAttribute="leading" type="default" id="g1v-RT-JZb"/>
-                            <constraint firstItem="yey-d1-f1Y" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="84" id="iTZ-hA-png"/>
-                            <constraint firstItem="G2O-Dm-oZv" firstAttribute="top" secondItem="gS5-2Z-Bpt" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="lhm-ml-k6S"/>
-                            <constraint firstItem="nKR-lf-ke0" firstAttribute="leading" secondItem="G2O-Dm-oZv" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="neu-n8-J1K"/>
+                            <constraint firstItem="nKR-lf-ke0" firstAttribute="leading" secondItem="q3K-Fx-GLO" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="gel-F9-ZHF"/>
+                            <constraint firstItem="4fi-Fj-t0b" firstAttribute="top" secondItem="7tB-XC-p3k" secondAttribute="top" type="default" id="k1R-4d-h2j"/>
                             <constraint firstItem="7tB-XC-p3k" firstAttribute="trailing" secondItem="v7i-ZY-ArL" secondAttribute="trailing" type="default" id="nxF-QH-aZI"/>
-                            <constraint firstItem="7tB-XC-p3k" firstAttribute="top" secondItem="4fi-Fj-t0b" secondAttribute="top" type="default" id="y3D-xK-eoo"/>
-                            <constraint firstItem="4fi-Fj-t0b" firstAttribute="top" secondItem="yey-d1-f1Y" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zhE-H0-rj7"/>
+                            <constraint firstItem="fxB-q1-8sz" firstAttribute="leading" secondItem="yey-d1-f1Y" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="qHi-4L-5qm"/>
+                            <constraint firstItem="SM6-do-7tP" firstAttribute="leading" secondItem="q3K-Fx-GLO" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="qsG-zG-fSr"/>
+                            <constraint firstItem="nKR-lf-ke0" firstAttribute="trailing" secondItem="G2O-Dm-oZv" secondAttribute="trailing" type="default" id="wgb-EP-vWl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="heightLabel" destination="fxB-q1-8sz" id="j67-SA-xqS"/>
+                        <outlet property="weightLabel" destination="q3K-Fx-GLO" id="5da-Z7-ACJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

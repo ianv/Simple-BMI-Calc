@@ -14,6 +14,21 @@
 
 @implementation ViewController
 
+@synthesize heightLabel = _heightLabel;
+@synthesize weightLabel = _weightLabel;
+@synthesize unitSwitch = _unitSwitch
+
+-(IBAction)unitSwitch:(UISwitch *)sender
+{
+    if (sender.isON = TRUE) {
+        self.heightLabel.text = @"in.";
+        self.weightLabel.text = @"lbs.";
+    } else {
+        self.heightLabel.text = @"cm.";
+        self.weightLabel.text = @"kg.";
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
