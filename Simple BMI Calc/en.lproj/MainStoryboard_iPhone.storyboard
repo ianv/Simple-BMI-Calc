@@ -37,6 +37,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="calculateBMI:" destination="2" eventType="touchUpInside" id="xjl-H2-PPc"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gS5-2Z-Bpt">
                                 <constraints>
@@ -108,7 +111,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="height" destination="yey-d1-f1Y" id="NtT-rj-Fe4"/>
                         <outlet property="heightLabel" destination="fxB-q1-8sz" id="j67-SA-xqS"/>
+                        <outlet property="weight" destination="4fi-Fj-t0b" id="2n7-lm-2RA"/>
                         <outlet property="weightLabel" destination="q3K-Fx-GLO" id="5da-Z7-ACJ"/>
                     </connections>
                 </viewController>

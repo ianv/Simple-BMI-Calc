@@ -13,7 +13,10 @@
 @property IBOutlet UILabel* heightLabel;
 @property IBOutlet UILabel* weightLabel;
 @property IBOutlet UISwitch* unitSwitch;
+@property IBOutlet UITextField* height;
+@property IBOutlet UITextField* weight;
 
--(IBAction)unitSwitch:(UISwitch*)sender;
+//-(IBAction)unitSwitch:(UISwitch*)sender;
+-(IBAction)calculateBMI:(UIButton*)sender;
 
 @end
