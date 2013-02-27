@@ -4,7 +4,7 @@
 //
 //  Created by Ian Vergara on 2/14/13.
 //  Copyright (c) 2013 Ian Vergara. All rights reserved.
-//
+//  ian.vergara@gmail.com
 
 #import "ViewController.h"
 
@@ -19,7 +19,8 @@
 
 @synthesize heightLabel = _heightLabel;
 @synthesize weightLabel = _weightLabel;
-@synthesize unitSwitch = _unitSwitch;
+@synthesize category = _category;
+@synthesize bmi = _bmi;
 @synthesize height = _height;
 @synthesize weight = _weight;
 
@@ -29,21 +30,76 @@
     if (toggle) {
         self.heightLabel.text = @"in.";
         self.weightLabel.text = @"lbs.";
-        NSLog(@"hi");
     } else {
         self.heightLabel.text = @"cm.";
         self.weightLabel.text = @"kg.";
-        NSLog(@"bye");
     }
 }
 
 -(IBAction)calculateBMI:(UIButton *)sender
 {
-    int a = 0;
-    int b = 0;
-    a = self.height.text.intValue;
-    b = self.weight.text.intValue;
-    int c = a + b;
+    float m = 0;
+    float kg = 0;
+    if(toggle){
+        m = self.height.text.doubleValue * .0254;
+        kg = self.weight.text.doubleValue * 0.453592;
+    } else {
+    m = self.height.text.doubleValue;
+    kg = self.weight.text.doubleValue;
+    }
+    float bmi = kg/(m*m);
+    
+    NSString* temp = [NSString stringWithFormat:@"%1.2f", bmi];
+    
+    if(bmi<16.00)
+    {
+        self.category.text = @"Severe Thinness";
+        self.bmi.text = temp;
+    }
+    else if(bmi >= 16.00 && bmi < 16.99)
+    {
+        self.category.text = @"Moderate Thinness";
+       self.bmi.text = temp;
+
+    }
+    else if(bmi >= 17.00 && bmi < 18.49)
+    {
+        self.category.text = @"Mild Thinness";
+        self.bmi.text = temp;
+    }
+    else if(bmi >= 18.50 && bmi < 24.99)
+    {
+        self.category.text = @"Normal Range";
+        self.bmi.text = temp;
+    }
+    else if(bmi >= 25.00 && bmi < 29.99)
+    {
+        self.category.text = @"Overweight";
+        self.bmi.text = temp;
+
+    }
+    else if(bmi >= 30.00 && bmi < 34.99)
+    {
+        self.category.text = @"Obese Class I (Moderate)";
+        self.bmi.text = temp;
+    }
+    else if(bmi >= 35.00 && bmi < 39.99)
+    {
+        self.category.text = @"Obese Class II (Severe)";
+        self.bmi.text = temp;
+
+    }
+    else if (bmi >39.99)
+    {
+        self.category.text = @"Obese Class III (Very Severe)";
+        self.bmi.text = temp;
+    }
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.weight resignFirstResponder];
+    [self.height resignFirstResponder];
 }
 
 - (void)viewDidLoad

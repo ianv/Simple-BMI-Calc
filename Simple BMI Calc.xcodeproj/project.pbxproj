@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		160B4C9A16DDEDE4005FF8F9 /* table.png in Resources */ = {isa = PBXBuildFile; fileRef = 160B4C9916DDEDE4005FF8F9 /* table.png */; };
 		16BA3B5016CE0041003E1C62 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BA3B4F16CE0041003E1C62 /* UIKit.framework */; };
 		16BA3B5216CE0041003E1C62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BA3B5116CE0041003E1C62 /* Foundation.framework */; };
 		16BA3B5416CE0041003E1C62 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BA3B5316CE0041003E1C62 /* CoreGraphics.framework */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		160B4C9916DDEDE4005FF8F9 /* table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = table.png; sourceTree = "<group>"; };
 		16BA3B4C16CE0041003E1C62 /* Simple BMI Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple BMI Calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16BA3B4F16CE0041003E1C62 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		16BA3B5116CE0041003E1C62 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -99,6 +101,7 @@
 		16BA3B5616CE0041003E1C62 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				160B4C9916DDEDE4005FF8F9 /* table.png */,
 				16BA3B5716CE0041003E1C62 /* Simple BMI Calc-Info.plist */,
 				16BA3B5816CE0041003E1C62 /* InfoPlist.strings */,
 				16BA3B5B16CE0041003E1C62 /* main.m */,
@@ -167,6 +170,7 @@
 				16BA3B6616CE0041003E1C62 /* Default-568h@2x.png in Resources */,
 				16BA3B6916CE0041003E1C62 /* MainStoryboard_iPhone.storyboard in Resources */,
 				16BA3B6C16CE0041003E1C62 /* MainStoryboard_iPad.storyboard in Resources */,
+				160B4C9A16DDEDE4005FF8F9 /* table.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +318,7 @@
 				16BA3B7416CE0041003E1C62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

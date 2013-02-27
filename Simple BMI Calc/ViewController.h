@@ -4,7 +4,7 @@
 //
 //  Created by Ian Vergara on 2/14/13.
 //  Copyright (c) 2013 Ian Vergara. All rights reserved.
-//
+//  ian.vergara@gmail.com
 
 #import <UIKit/UIKit.h>
 
@@ -12,11 +12,11 @@
 
 @property IBOutlet UILabel* heightLabel;
 @property IBOutlet UILabel* weightLabel;
-@property IBOutlet UISwitch* unitSwitch;
+@property IBOutlet UILabel* category;
+@property IBOutlet UILabel* bmi;
 @property IBOutlet UITextField* height;
 @property IBOutlet UITextField* weight;
 
-//-(IBAction)unitSwitch:(UISwitch*)sender;
 -(IBAction)calculateBMI:(UIButton*)sender;
 
 @end
